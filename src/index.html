@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/output.css">
+
+    <!-- fontawesome import -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
     <title>Tailwind CSS</title>
 </head>
-<body>
-    <div class="flex justify-center items-center h-screen">
-        <h1 class="text-4xl">Hello world !</h1>
-    </div>
+
+<body class="bg-gray-100 h-full w-full font-montserrat">
+    <!-- NavBar -->
+    <header class="bg-white fixed top-0 w-full shadow-md">
+        <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4 bg-white z-50">
+            <a href="#" class="flex items-center">
+                <img class="hidden md:inline-block w-8" src="./assets/img/mon logo - fond noir.png" alt="logo">
+                <span><span class="md:hidden">K</span>evin <strong>K<span class="text-blue-400">.</span></strong></span>
+            </a>
+            <div id="toggler" class="md:hidden">
+                <a href="#">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </a>
+            </div>
+            <ul id="toggledMenu" class="transition duration-300 ease-out -translate-y-full -z-10 border-2 border-gray-200 text-sm left-0 bg-white flex flex-col text-center absolute w-full top-full md:transform-none md:border-none md:flex-row md:static md:z-10 md:w-min">
+                <li class="hover:bg-blue-400 hover:text-white md:rounded-lg md:mx-1 hover:transition-all duration-200 ease-in"><a class="py-2 md:px-3 w-full h-full inline-block"
+                        href="#">Home</a></li>
+                <li class="hover:bg-blue-400 hover:text-white md:rounded-lg md:mx-1 hover:transition-all duration-200 ease-in"><a class="py-2 md:px-3 w-full h-full inline-block"
+                        href="#">Hobbies</a></li>
+                <li class="hover:bg-blue-400 hover:text-white md:rounded-lg md:mx-1 hover:transition-all duration-200 ease-in"><a class="py-2 md:px-3 w-full h-full inline-block"
+                        href="#">Skills</a></li>
+                <li class="hover:bg-blue-400 hover:text-white md:rounded-lg md:mx-1 hover:transition-all duration-200 ease-in"><a class="py-2 md:px-3 w-full h-full inline-block"
+                        href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
