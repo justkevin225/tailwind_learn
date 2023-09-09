@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/output.css">
+
+    <!-- fontawesome import -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
     <title>Tailwind CSS</title>
 </head>
-<body>
-    <div class="flex justify-center items-center h-screen">
-        <h1 class="text-4xl">Hello world !</h1>
-    </div>
+
+<body class="h-full bg-neutral-600 font-montserrat">
+    <header class="bg-black top-0 fixed w-full">
+        <nav class="bg-black max-w-3xl mx-auto flex flex-col px-6 py-3 text-sm">
+            <div class="flex justify-between items-center">
+                <a href="#">
+                    <img class="w-24" src="./img/logo.svg" alt="logo">
+                </a>
+                <button
+                id="toggler"
+                    class="md:hidden text-white text-xl hover:text-black hover:bg-slate-200 px-4 py-1 rounded-xl transition duration-200">
+                    <i class="fa-duotone fa-bars"></i>
+                </button>
+                <div id="toggledMenu" class="-translate-y-full -z-10 overflow-auto h-screen px-5 absolute top-full left-0 bg-black text-white w-full font-semibold">
+                    <ul>
+                        <li class="bg-neutral-800 rounded-md py-3 px-5 my-2">
+                            <div class="pb-3">Element</div>
+                            <ul class="grid grid-cols-2 gap-2">
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Browse All</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Buttons</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Something</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Another one</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">I don't know</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Browse All</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Buttons</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Something</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">Another one</a></li>
+                                <li class="bg-neutral-600 rounded-md"><a class="inline-block w-full h-full p-4" href="#">I don't know</a></li>
+                            </ul>
+                        </li>
+                        <li class="text-center my-2">
+                            <a class="px-3 rounded-md py-1 hover:bg-neutral-700 transition duration-300"
+                                href="#">Test</a>
+                        </li>
+                        <li class="text-center my-2">
+                            <a class="px-3 rounded-md py-1 hover:bg-neutral-700 transition duration-300"
+                                href="#">Some</a>
+                        </li>
+                        <li class="text-center my-2">
+                            <a class="px-3 rounded-md py-1 hover:bg-neutral-700 transition duration-300"
+                                href="#">Thing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="navButtons" class="hidden flex justify-end py-3">
+                <button class="text-white bg-neutral-600 px-3 py-1 rounded-md hidden md:inline-block">Create</button>
+                <button class="text-white bg-neutral-600 px-5 py-3 rounded-md"> <i class="fa-brands fa-github mr-2"></i>
+                    Sign In With Github</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
